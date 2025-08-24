@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #9575CD;
+  --primary-light: #B39DDB;
+  --primary-dark: #7E57C2;
+  --secondary: #F3E5F5;
+  --accent: #4A148C;
+  --text-primary: #2C3E50;
+  --text-secondary: #546E7A;
+}
+
+body {
+  background-color: #F8F7FA;
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+.card {
+  @apply bg-white rounded-xl shadow-sm;
+  border: 1px solid rgba(149, 117, 205, 0.1);
+}
+
+.btn-primary {
+  @apply bg-[#9575CD] text-white px-4 py-2 rounded-lg hover:bg-[#7E57C2] transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-[#F3E5F5] text-[#9575CD] px-4 py-2 rounded-lg hover:bg-[#EDE7F6] transition-colors;
+}
+
+.react-calendar {
+  @apply w-full border-none rounded-xl overflow-hidden;
+  background-color: white !important;
+}
+
+.react-calendar__tile {
+  @apply rounded-lg transition-colors;
+}
+
+.react-calendar__tile:enabled:hover {
+  @apply bg-[#F3E5F5] text-[#9575CD];
+}
+
+.react-calendar__tile--active {
+  @apply bg-[#9575CD] text-white;
+}
+
+.react-calendar__tile--now {
+  @apply bg-[#EDE7F6] text-[#7E57C2];
+}
